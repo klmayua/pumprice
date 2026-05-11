@@ -14,7 +14,6 @@ export default function Home() {
     <div className="relative min-h-screen bg-[#050505] text-white overflow-x-hidden">
       <AnimatedBackground />
 
-      {/* Ticker at absolute top */}
       <SocialStrip />
 
       <div className="relative z-10">

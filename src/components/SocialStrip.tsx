@@ -20,12 +20,11 @@ export default function SocialStrip() {
 
   return (
     <div
-      className="absolute top-0 left-0 right-0 z-40 overflow-hidden"
+      className="sticky top-0 left-0 right-0 z-[9999] overflow-hidden h-[48px] md:h-[52px]"
       style={{
-        height: "44px",
-        background: "rgba(10,10,10,0.55)",
-        backdropFilter: "blur(14px)",
-        WebkitBackdropFilter: "blur(14px)",
+        background: "rgba(8,8,8,0.72)",
+        backdropFilter: "blur(18px)",
+        WebkitBackdropFilter: "blur(18px)",
         borderBottom: "1px solid rgba(255,255,255,0.04)",
       }}
     >
