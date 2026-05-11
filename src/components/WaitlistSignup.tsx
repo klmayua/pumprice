@@ -18,16 +18,72 @@ export default function WaitlistSignup() {
   };
 
   return (
-    <section className="relative py-20 md:py-[120px] px-4 sm:px-6 lg:px-8">
-      <div className="max-w-[1280px] mx-auto">
+    <section id="waitlist" className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8">
+      {/* Floating orbs behind */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          className="absolute w-[300px] h-[300px] rounded-full opacity-10"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(242,140,56,0.4) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            top: "20%",
+            left: "10%",
+          }}
+          animate={{ x: [0, 30, 0], y: [0, 20, 0] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-[250px] h-[250px] rounded-full opacity-10"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(255,242,0,0.3) 0%, transparent 70%)",
+            filter: "blur(80px)",
+            bottom: "10%",
+            right: "15%",
+          }}
+          animate={{ x: [0, -20, 0], y: [0, -15, 0] }}
+          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
+
+      <div className="max-w-[1280px] mx-auto relative z-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="max-w-[640px] mx-auto"
         >
-          <div className="glass-card rounded-[28px] p-8 md:p-12">
+          <div
+            className="rounded-[28px] p-7 md:p-10 relative overflow-hidden"
+            style={{
+              background: "rgba(255,255,255,0.05)",
+              backdropFilter: "blur(40px)",
+              WebkitBackdropFilter: "blur(40px)",
+              border: "1px solid rgba(255,255,255,0.08)",
+              boxShadow:
+                "0 16px 64px rgba(0,0,0,0.4), 0 0 60px rgba(242,140,56,0.06), inset 0 1px 0 rgba(255,255,255,0.06)",
+            }}
+          >
+            {/* Cinematic top glow */}
+            <div
+              className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px]"
+              style={{
+                background:
+                  "linear-gradient(90deg, transparent, rgba(255,242,0,0.3), rgba(242,140,56,0.3), transparent)",
+              }}
+            />
+
+            {/* Internal highlight */}
+            <div
+              className="absolute inset-0 pointer-events-none"
+              style={{
+                background:
+                  "linear-gradient(180deg, rgba(255,255,255,0.03) 0%, transparent 30%)",
+              }}
+            />
+
             <AnimatePresence mode="wait">
               {!submitted ? (
                 <motion.div
@@ -36,19 +92,32 @@ export default function WaitlistSignup() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
+                  className="relative z-10"
                 >
-                  <div className="text-center mb-10">
-                    <h2 className="text-3xl md:text-4xl font-extrabold mb-4 gradient-text">
+                  <div className="text-center mb-8">
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.2, type: "spring" }}
+                      className="w-12 h-12 rounded-xl bg-[rgba(255,242,0,0.08)] border border-[rgba(255,242,0,0.15)] flex items-center justify-center mx-auto mb-4"
+                      style={{
+                        boxShadow: "0 0 24px rgba(255,242,0,0.08)",
+                      }}
+                    >
+                      <Sparkles className="w-6 h-6 text-[#FFF200]" />
+                    </motion.div>
+                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-3 gradient-text">
                       Be First To Know
                     </h2>
-                    <p className="text-[#8A8A8A] leading-relaxed whitespace-pre-line">
-                      {`Join the relaunch waitlist
-and get notified the moment
-the new PUMPRICE experience goes live.`}
+                    <p className="text-[#8A8A8A] text-sm md:text-base leading-relaxed">
+                      Join the relaunch waitlist and get notified the moment the
+                      new PUMPRICE experience goes live. Early members get
+                      exclusive perks.
                     </p>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-5">
+                  <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="relative">
                       <input
                         type="text"
@@ -58,7 +127,7 @@ the new PUMPRICE experience goes live.`}
                         onFocus={() => setFocusedField("name")}
                         onBlur={() => setFocusedField(null)}
                         required
-                        className="w-full h-16 rounded-2xl px-5 text-white placeholder-[#8A8A8A] outline-none transition-all duration-300"
+                        className="w-full h-[56px] md:h-[64px] rounded-2xl px-5 text-white placeholder-[#8A8A8A] outline-none transition-all duration-300 text-sm md:text-base"
                         style={{
                           background: "rgba(255,255,255,0.05)",
                           border:
@@ -67,7 +136,7 @@ the new PUMPRICE experience goes live.`}
                               : "1px solid rgba(255,255,255,0.08)",
                           boxShadow:
                             focusedField === "name"
-                              ? "0 0 20px rgba(255,242,0,0.1)"
+                              ? "0 0 24px rgba(255,242,0,0.1)"
                               : "none",
                         }}
                       />
@@ -82,7 +151,7 @@ the new PUMPRICE experience goes live.`}
                         onFocus={() => setFocusedField("email")}
                         onBlur={() => setFocusedField(null)}
                         required
-                        className="w-full h-16 rounded-2xl px-5 text-white placeholder-[#8A8A8A] outline-none transition-all duration-300"
+                        className="w-full h-[56px] md:h-[64px] rounded-2xl px-5 text-white placeholder-[#8A8A8A] outline-none transition-all duration-300 text-sm md:text-base"
                         style={{
                           background: "rgba(255,255,255,0.05)",
                           border:
@@ -91,7 +160,7 @@ the new PUMPRICE experience goes live.`}
                               : "1px solid rgba(255,255,255,0.08)",
                           boxShadow:
                             focusedField === "email"
-                              ? "0 0 20px rgba(255,242,0,0.1)"
+                              ? "0 0 24px rgba(255,242,0,0.1)"
                               : "none",
                         }}
                       />
@@ -101,10 +170,9 @@ the new PUMPRICE experience goes live.`}
                       type="submit"
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full h-16 rounded-[18px] font-bold text-[#050505] text-lg relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_40px_rgba(242,140,56,0.3)]"
+                      className="w-full h-[56px] md:h-[64px] rounded-[18px] font-bold text-[#050505] text-base md:text-lg relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_50px_rgba(242,140,56,0.35)]"
                       style={{
-                        background:
-                          "linear-gradient(135deg, #FFF200, #F28C38)",
+                        background: "linear-gradient(135deg, #FFF200, #F28C38)",
                       }}
                     >
                       Notify Me
@@ -117,7 +185,7 @@ the new PUMPRICE experience goes live.`}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
-                  className="text-center py-12"
+                  className="text-center py-10 relative z-10"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
@@ -125,7 +193,7 @@ the new PUMPRICE experience goes live.`}
                     transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
                     className="w-20 h-20 rounded-full bg-[rgba(255,242,0,0.1)] border border-[rgba(255,242,0,0.2)] flex items-center justify-center mx-auto mb-6"
                     style={{
-                      boxShadow: "0 0 40px rgba(255,242,0,0.2)",
+                      boxShadow: "0 0 40px rgba(255,242,0,0.15)",
                     }}
                   >
                     <Check className="w-10 h-10 text-[#FFF200]" />

@@ -25,49 +25,78 @@ const features = [
 
 export default function RedevelopmentMessage() {
   return (
-    <section className="relative py-20 md:py-[120px] px-4 sm:px-6 lg:px-8">
+    <section className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="max-w-[900px] mx-auto text-center mb-16"
+          className="max-w-[900px] mx-auto text-center mb-10 md:mb-14"
         >
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-8 gradient-text">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-5 md:mb-6 gradient-text">
             Why We&apos;re Rebuilding
           </h2>
-          <p className="text-lg md:text-xl leading-[1.8] text-[#C7C7C7] whitespace-pre-line">
-            {`We are redesigning the entire PUMPRICE ecosystem from the ground up.
-
-From lightning-fast ordering to smarter event planning,
-scheduled deliveries,
-festive bulk ordering,
-nightlife experiences,
-and premium convenience.`}
+          <p className="text-base md:text-lg leading-[1.7] text-[#C7C7C7]">
+            We&apos;re tearing it all down and rebuilding from zero. Not because we
+            have to — because{" "}
+            <span className="text-white font-semibold">
+              nightlife in Africa deserves better
+            </span>
+            . Faster orders. Smarter logistics. Bulk event planning. Scheduled
+            deliveries. The whole ecosystem, reimagined for the culture.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
           {features.map((feature, index) => (
             <motion.div
               key={feature.label}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
               whileHover={{
                 y: -5,
                 transition: { duration: 0.3 },
               }}
-              className="glass-card rounded-[20px] p-5 md:p-6 flex flex-col items-center text-center gap-3 group cursor-default"
+              className="group cursor-default relative overflow-hidden"
+              style={{
+                background: "rgba(255,255,255,0.06)",
+                backdropFilter: "blur(24px)",
+                WebkitBackdropFilter: "blur(24px)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: "20px",
+                boxShadow: "0 8px 32px rgba(0,0,0,0.35)",
+              }}
             >
-              <div className="w-12 h-12 rounded-xl bg-[rgba(242,140,56,0.1)] flex items-center justify-center group-hover:bg-[rgba(242,140,56,0.2)] transition-colors duration-300">
-                <feature.icon className="w-6 h-6 text-[#F28C38]" />
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{
+                  background:
+                    "linear-gradient(180deg, rgba(255,255,255,0.04) 0%, transparent 40%)",
+                }}
+              />
+              <div
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-[20px]"
+                style={{
+                  boxShadow: "inset 0 0 30px rgba(242,140,56,0.06)",
+                }}
+              />
+
+              <div className="relative z-10 p-4 md:p-5 flex flex-col items-center text-center gap-2.5 md:gap-3">
+                <div
+                  className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[rgba(242,140,56,0.1)] flex items-center justify-center group-hover:bg-[rgba(242,140,56,0.2)] transition-colors duration-300"
+                  style={{
+                    boxShadow: "0 0 20px rgba(242,140,56,0.08)",
+                  }}
+                >
+                  <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-[#F28C38]" />
+                </div>
+                <span className="text-xs md:text-sm font-semibold text-[#C7C7C7] group-hover:text-white transition-colors duration-300 leading-tight">
+                  {feature.label}
+                </span>
               </div>
-              <span className="text-sm md:text-base font-semibold text-[#C7C7C7] group-hover:text-white transition-colors duration-300">
-                {feature.label}
-              </span>
             </motion.div>
           ))}
         </div>

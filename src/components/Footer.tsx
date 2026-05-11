@@ -5,7 +5,7 @@ import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="relative py-10 md:py-12 px-4 sm:px-6 lg:px-8">
       {/* Top border glow */}
       <motion.div
         className="absolute top-0 left-0 right-0 h-[1px]"
@@ -24,7 +24,7 @@ export default function Footer() {
       />
 
       <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col items-center text-center gap-8">
+        <div className="flex flex-col items-center text-center gap-5 md:gap-6">
           {/* Status */}
           <motion.div
             initial={{ opacity: 0 }}
