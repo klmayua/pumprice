@@ -18,8 +18,7 @@ export default function WaitlistSignup() {
   };
 
   return (
-    <section id="waitlist" className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8">
-      {/* Floating orbs behind */}
+    <section id="waitlist" className="relative py-10 md:py-14 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
           className="absolute w-[300px] h-[300px] rounded-full opacity-10"
@@ -49,14 +48,14 @@ export default function WaitlistSignup() {
 
       <div className="max-w-[1280px] mx-auto relative z-10">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          transition={{ duration: 0.7 }}
           className="max-w-[640px] mx-auto"
         >
           <div
-            className="rounded-[28px] p-7 md:p-10 relative overflow-hidden"
+            className="rounded-[28px] p-6 md:p-8 relative overflow-hidden"
             style={{
               background: "rgba(255,255,255,0.05)",
               backdropFilter: "blur(40px)",
@@ -66,7 +65,6 @@ export default function WaitlistSignup() {
                 "0 16px 64px rgba(0,0,0,0.4), 0 0 60px rgba(242,140,56,0.06), inset 0 1px 0 rgba(255,255,255,0.06)",
             }}
           >
-            {/* Cinematic top glow */}
             <div
               className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px]"
               style={{
@@ -75,7 +73,6 @@ export default function WaitlistSignup() {
               }}
             />
 
-            {/* Internal highlight */}
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
@@ -94,20 +91,20 @@ export default function WaitlistSignup() {
                   transition={{ duration: 0.3 }}
                   className="relative z-10"
                 >
-                  <div className="text-center mb-8">
+                  <div className="text-center mb-6">
                     <motion.div
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.2, type: "spring" }}
-                      className="w-12 h-12 rounded-xl bg-[rgba(255,242,0,0.08)] border border-[rgba(255,242,0,0.15)] flex items-center justify-center mx-auto mb-4"
+                      className="w-11 h-11 rounded-xl bg-[rgba(255,242,0,0.08)] border border-[rgba(255,242,0,0.15)] flex items-center justify-center mx-auto mb-3"
                       style={{
                         boxShadow: "0 0 24px rgba(255,242,0,0.08)",
                       }}
                     >
-                      <Sparkles className="w-6 h-6 text-[#FFF200]" />
+                      <Sparkles className="w-5 h-5 text-[#FFF200]" />
                     </motion.div>
-                    <h2 className="text-2xl md:text-3xl lg:text-4xl font-extrabold mb-3 gradient-text">
+                    <h2 className="text-2xl md:text-3xl font-extrabold mb-2 gradient-text">
                       Be First To Know
                     </h2>
                     <p className="text-[#8A8A8A] text-sm md:text-base leading-relaxed">
@@ -117,7 +114,7 @@ export default function WaitlistSignup() {
                     </p>
                   </div>
 
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="space-y-3.5">
                     <div className="relative">
                       <input
                         type="text"
@@ -127,7 +124,7 @@ export default function WaitlistSignup() {
                         onFocus={() => setFocusedField("name")}
                         onBlur={() => setFocusedField(null)}
                         required
-                        className="w-full h-[56px] md:h-[64px] rounded-2xl px-5 text-white placeholder-[#8A8A8A] outline-none transition-all duration-300 text-sm md:text-base"
+                        className="w-full h-[52px] md:h-[56px] rounded-2xl px-5 text-white placeholder-[#8A8A8A] outline-none transition-all duration-300 text-sm md:text-base"
                         style={{
                           background: "rgba(255,255,255,0.05)",
                           border:
@@ -151,7 +148,7 @@ export default function WaitlistSignup() {
                         onFocus={() => setFocusedField("email")}
                         onBlur={() => setFocusedField(null)}
                         required
-                        className="w-full h-[56px] md:h-[64px] rounded-2xl px-5 text-white placeholder-[#8A8A8A] outline-none transition-all duration-300 text-sm md:text-base"
+                        className="w-full h-[52px] md:h-[56px] rounded-2xl px-5 text-white placeholder-[#8A8A8A] outline-none transition-all duration-300 text-sm md:text-base"
                         style={{
                           background: "rgba(255,255,255,0.05)",
                           border:
@@ -170,7 +167,7 @@ export default function WaitlistSignup() {
                       type="submit"
                       whileHover={{ scale: 1.03 }}
                       whileTap={{ scale: 0.98 }}
-                      className="w-full h-[56px] md:h-[64px] rounded-[18px] font-bold text-[#050505] text-base md:text-lg relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_50px_rgba(242,140,56,0.35)]"
+                      className="w-full h-[52px] md:h-[56px] rounded-[18px] font-bold text-[#050505] text-base md:text-lg relative overflow-hidden transition-all duration-300 hover:shadow-[0_0_50px_rgba(242,140,56,0.35)]"
                       style={{
                         background: "linear-gradient(135deg, #FFF200, #F28C38)",
                       }}
@@ -185,20 +182,20 @@ export default function WaitlistSignup() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5 }}
-                  className="text-center py-10 relative z-10"
+                  className="text-center py-8 relative z-10"
                 >
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
                     transition={{ delay: 0.2, type: "spring", stiffness: 200 }}
-                    className="w-20 h-20 rounded-full bg-[rgba(255,242,0,0.1)] border border-[rgba(255,242,0,0.2)] flex items-center justify-center mx-auto mb-6"
+                    className="w-[72px] h-[72px] rounded-full bg-[rgba(255,242,0,0.1)] border border-[rgba(255,242,0,0.2)] flex items-center justify-center mx-auto mb-5"
                     style={{
                       boxShadow: "0 0 40px rgba(255,242,0,0.15)",
                     }}
                   >
-                    <Check className="w-10 h-10 text-[#FFF200]" />
+                    <Check className="w-9 h-9 text-[#FFF200]" />
                   </motion.div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
                     You&apos;re officially on the list.
                   </h3>
                   <p className="text-[#8A8A8A]">

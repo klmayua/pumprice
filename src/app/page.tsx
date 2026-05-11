@@ -1,8 +1,8 @@
 "use client";
 
 import AnimatedBackground from "@/components/AnimatedBackground";
-import HeroSection from "@/components/HeroSection";
 import SocialStrip from "@/components/SocialStrip";
+import HeroSection from "@/components/HeroSection";
 import RedevelopmentMessage from "@/components/RedevelopmentMessage";
 import FeaturesGrid from "@/components/FeaturesGrid";
 import WaitlistSignup from "@/components/WaitlistSignup";
@@ -14,9 +14,11 @@ export default function Home() {
     <div className="relative min-h-screen bg-[#050505] text-white overflow-x-hidden">
       <AnimatedBackground />
 
+      {/* Ticker at absolute top */}
+      <SocialStrip />
+
       <div className="relative z-10">
         <HeroSection />
-        <SocialStrip />
         <RedevelopmentMessage />
         <FeaturesGrid />
         <WaitlistSignup />

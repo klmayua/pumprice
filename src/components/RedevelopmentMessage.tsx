@@ -25,16 +25,16 @@ const features = [
 
 export default function RedevelopmentMessage() {
   return (
-    <section className="relative py-12 md:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="relative py-10 md:py-14 px-4 sm:px-6 lg:px-8">
       <div className="max-w-[1280px] mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-          className="max-w-[900px] mx-auto text-center mb-10 md:mb-14"
+          transition={{ duration: 0.7 }}
+          className="max-w-[900px] mx-auto text-center mb-8 md:mb-10"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-5 md:mb-6 gradient-text">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-4 md:mb-5 gradient-text">
             Why We&apos;re Rebuilding
           </h2>
           <p className="text-base md:text-lg leading-[1.7] text-[#C7C7C7]">
@@ -48,17 +48,17 @@ export default function RedevelopmentMessage() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
           {features.map((feature, index) => (
             <motion.div
               key={feature.label}
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.08 }}
+              transition={{ duration: 0.45, delay: index * 0.07 }}
               whileHover={{
-                y: -5,
-                transition: { duration: 0.3 },
+                y: -4,
+                transition: { duration: 0.25 },
               }}
               className="group cursor-default relative overflow-hidden"
               style={{
@@ -84,16 +84,16 @@ export default function RedevelopmentMessage() {
                 }}
               />
 
-              <div className="relative z-10 p-4 md:p-5 flex flex-col items-center text-center gap-2.5 md:gap-3">
+              <div className="relative z-10 p-3.5 md:p-4 flex flex-col items-center text-center gap-2 md:gap-2.5">
                 <div
-                  className="w-11 h-11 md:w-12 md:h-12 rounded-xl bg-[rgba(242,140,56,0.1)] flex items-center justify-center group-hover:bg-[rgba(242,140,56,0.2)] transition-colors duration-300"
+                  className="w-10 h-10 md:w-11 md:h-11 rounded-xl bg-[rgba(242,140,56,0.1)] flex items-center justify-center group-hover:bg-[rgba(242,140,56,0.2)] transition-colors duration-300"
                   style={{
                     boxShadow: "0 0 20px rgba(242,140,56,0.08)",
                   }}
                 >
-                  <feature.icon className="w-5 h-5 md:w-6 md:h-6 text-[#F28C38]" />
+                  <feature.icon className="w-5 h-5 md:w-[22px] md:h-[22px] text-[#F28C38]" />
                 </div>
-                <span className="text-xs md:text-sm font-semibold text-[#C7C7C7] group-hover:text-white transition-colors duration-300 leading-tight">
+                <span className="text-xs md:text-[13px] font-semibold text-[#C7C7C7] group-hover:text-white transition-colors duration-300 leading-tight">
                   {feature.label}
                 </span>
               </div>

@@ -11,65 +11,51 @@ const messages = [
   "Order by midnight, deliver by morning",
 ];
 
+const colors = ["#FFF200", "#F28C38", "#FFD86B", "#FFFFFF"];
+
 export default function SocialStrip() {
   const doubledMessages = [...messages, ...messages];
 
   return (
-    <section className="relative overflow-hidden">
-      <div
-        className="py-4 md:py-5"
-        style={{
-          background: "rgba(255,255,255,0.04)",
-          backdropFilter: "blur(20px)",
-          WebkitBackdropFilter: "blur(20px)",
-          borderTop: "1px solid rgba(255,255,255,0.06)",
-          borderBottom: "1px solid rgba(255,255,255,0.06)",
-        }}
-      >
-        {/* Top border glow */}
-        <div
-          className="absolute top-0 left-0 right-0 h-[1px]"
-          style={{
-            background:
-              "linear-gradient(90deg, transparent, rgba(242,140,56,0.35), rgba(255,242,0,0.35), transparent)",
+    <div
+      className="absolute top-0 left-0 right-0 z-40 overflow-hidden"
+      style={{
+        height: "44px",
+        background: "rgba(10,10,10,0.55)",
+        backdropFilter: "blur(14px)",
+        WebkitBackdropFilter: "blur(14px)",
+        borderBottom: "1px solid rgba(255,255,255,0.04)",
+      }}
+    >
+      <div className="flex items-center h-full">
+        <motion.div
+          className="flex items-center gap-8 md:gap-10 whitespace-nowrap pl-4"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{
+            duration: 40,
+            repeat: Infinity,
+            ease: "linear",
           }}
-        />
-
-        <div className="flex">
-          <motion.div
-            className="flex gap-10 md:gap-16 items-center whitespace-nowrap"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              duration: 35,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
-            {doubledMessages.map((message, index) => (
-              <div key={index} className="flex items-center gap-10 md:gap-16">
-                <span className="text-sm md:text-lg font-semibold text-[#8A8A8A] tracking-wide">
-                  {message}
-                </span>
-                <span
-                  className="w-2 h-2 rounded-full flex-shrink-0"
-                  style={{
-                    background: "linear-gradient(135deg, #FFF200, #F28C38)",
-                  }}
-                />
-              </div>
-            ))}
-          </motion.div>
-        </div>
-
-        {/* Bottom border glow */}
-        <div
-          className="absolute bottom-0 left-0 right-0 h-[1px]"
-          style={{
-            background:
-              "linear-gradient(90deg, transparent, rgba(242,140,56,0.35), rgba(255,242,0,0.35), transparent)",
-          }}
-        />
+        >
+          {doubledMessages.map((message, index) => (
+            <div key={index} className="flex items-center gap-8 md:gap-10">
+              <span
+                className="text-[14px] font-medium tracking-[0.01em]"
+                style={{ color: colors[index % colors.length] }}
+              >
+                {message}
+              </span>
+              <span
+                className="w-[4px] h-[4px] rounded-full flex-shrink-0"
+                style={{
+                  background: "#F28C38",
+                  boxShadow: "0 0 6px rgba(242,140,56,0.5)",
+                }}
+              />
+            </div>
+          ))}
+        </motion.div>
       </div>
-    </section>
+    </div>
   );
 }

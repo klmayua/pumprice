@@ -5,8 +5,7 @@ import { Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="relative py-10 md:py-12 px-4 sm:px-6 lg:px-8">
-      {/* Top border glow */}
+    <footer className="relative py-8 md:py-10 px-4 sm:px-6 lg:px-8">
       <motion.div
         className="absolute top-0 left-0 right-0 h-[1px]"
         style={{
@@ -24,13 +23,12 @@ export default function Footer() {
       />
 
       <div className="max-w-[1280px] mx-auto">
-        <div className="flex flex-col items-center text-center gap-5 md:gap-6">
-          {/* Status */}
+        <div className="flex flex-col items-center text-center gap-4 md:gap-5">
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.7 }}
             className="flex items-center gap-2"
           >
             <span className="relative flex h-3 w-3">
@@ -42,25 +40,23 @@ export default function Footer() {
             </span>
           </motion.div>
 
-          {/* Email */}
           <motion.a
             href="mailto:info@pumprice.com.ng"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
             className="flex items-center gap-2 text-[#C7C7C7] hover:text-[#F28C38] transition-colors duration-300"
           >
             <Mail className="w-4 h-4" />
             <span className="text-sm">info@pumprice.com.ng</span>
           </motion.a>
 
-          {/* Copyright */}
           <motion.p
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
             className="text-sm text-[#8A8A8A]"
           >
             © 2026 PUMPRICE
