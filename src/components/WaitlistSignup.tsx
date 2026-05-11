@@ -105,12 +105,12 @@ export default function WaitlistSignup() {
                       <Sparkles className="w-5 h-5 text-[#FFF200]" />
                     </motion.div>
                     <h2 className="text-2xl md:text-3xl font-extrabold mb-2 gradient-text">
-                      Be First To Know
+                      Be First Inside The New PUMPRICE
                     </h2>
                     <p className="text-[#8A8A8A] text-sm md:text-base leading-relaxed">
-                      Join the relaunch waitlist and get notified the moment the
-                      new PUMPRICE experience goes live. Early members get
-                      exclusive perks.
+                      We&apos;re rebuilding the entire experience for people who care
+                      about better ordering, smoother hosting, smarter
+                      deliveries, and premium drinks culture.
                     </p>
                   </div>
 
@@ -172,7 +172,7 @@ export default function WaitlistSignup() {
                         background: "linear-gradient(135deg, #FFF200, #F28C38)",
                       }}
                     >
-                      Notify Me
+                      Get Early Access
                     </motion.button>
                   </form>
                 </motion.div>

@@ -63,7 +63,7 @@ export default function HeroSection() {
               className="text-[clamp(1.9rem,5vw,3.2rem)] md:text-[clamp(2.4rem,3.8vw,3.8rem)] font-extrabold leading-[1.05] tracking-[-0.04em] mb-3 md:mb-4 text-glow"
             >
               <span className="gradient-text">
-                We&apos;re Rebuilding the Future of Drinks Ordering
+                Africa&apos;s Premium Drinks Experience, Rebuilt From Zero.
               </span>
             </motion.h1>
 
@@ -74,9 +74,14 @@ export default function HeroSection() {
               transition={{ duration: 0.7, delay: 0.45 }}
               className="text-[0.95rem] md:text-[1.05rem] leading-[1.65] text-[#C7C7C7] max-w-[500px] mb-1"
             >
-              Bigger infrastructure. Faster delivery flows. Better nightlife
-              experiences. Smarter ordering.{" "}
-              <span className="text-white font-semibold">PUMPRICE is evolving.</span>
+              We&apos;re tearing it all down and rebuilding from zero. Not because
+              we have to — because{" "}
+              <span className="text-white font-semibold">
+                drinks culture in Africa deserves better
+              </span>
+              . Faster orders. Smarter logistics. Bulk event planning.
+              Scheduled deliveries. The whole ecosystem, reimagined for the
+              culture.
             </motion.p>
 
             {/* Countdown - INSIDE HERO */}
@@ -104,7 +109,7 @@ export default function HeroSection() {
                   background: "linear-gradient(135deg, #FFF200, #F28C38)",
                 }}
               >
-                Join The Relaunch Waitlist
+                Get Early Access
               </motion.button>
 
               <motion.button
@@ -120,7 +125,7 @@ export default function HeroSection() {
                   boxShadow: "0 8px 32px rgba(0,0,0,0.35)",
                 }}
               >
-                Explore What&apos;s Coming
+                Discover The New Experience
               </motion.button>
             </motion.div>
           </div>

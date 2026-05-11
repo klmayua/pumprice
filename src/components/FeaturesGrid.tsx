@@ -12,30 +12,30 @@ import {
 
 const items = [
   {
-    title: "Party Ordering",
+    title: "Event & Celebration Planning",
     description:
-      "Plan your entire event from one dashboard. Schedule deliveries, pick curated bundles, and never run dry again.",
+      "Plan weddings, birthdays, house parties, corporate gatherings, and celebrations with ease. One dashboard. Zero stress.",
     icon: PartyPopper,
     visual: "party",
   },
   {
     title: "Festive Bulk Orders",
     description:
-      "Christmas, Detty December, corporate events — lock in your stock early and skip the last-minute rush.",
+      "Pre-order drinks for festive seasons, large gatherings, and important moments — without the stress. Lock it in early.",
     icon: Gift,
     visual: "festive",
   },
   {
-    title: "Faster Deliveries",
+    title: "Smarter Delivery Logistics",
     description:
-      "Smarter dispatch routes. Real-time tracking. Cold-chain handling. Your drinks arrive exactly how they left.",
+      "Faster dispatching, improved inventory visibility, and delivery systems built for modern African cities.",
     icon: Rocket,
     visual: "delivery",
   },
   {
-    title: "Premium Experience",
+    title: "Elevated Buying Experience",
     description:
-      "A checkout flow that feels like a velvet rope. Dark mode, golden accents, and zero friction from cart to door.",
+      "A refined drinks-buying experience designed around convenience, culture, and quality. From cart to door, effortlessly.",
     icon: Sparkles,
     visual: "premium",
   },
@@ -47,9 +47,9 @@ const items = [
     visual: "smart",
   },
   {
-    title: "VIP Experiences",
+    title: "Premium Member Experiences",
     description:
-      "Exclusive early access, private event invites, priority delivery windows, and members-only pricing.",
+      "Exclusive early access, private event invites, priority delivery windows, and members-only pricing for those who value quality.",
     icon: Crown,
     visual: "vip",
   },
@@ -84,10 +84,10 @@ export default function FeaturesGrid() {
           className="text-center mb-8 md:mb-10"
         >
           <h2 className="text-2xl md:text-4xl lg:text-5xl font-extrabold mb-3 md:mb-4 gradient-text">
-            What&apos;s Coming
+            What&apos;s Changing
           </h2>
           <p className="text-[#8A8A8A] text-base md:text-lg max-w-[600px] mx-auto">
-            The next era of premium drinks ordering. Built for nightlife.
+            The next era of premium drinks ordering. Built for culture.
             Built for Africa.
           </p>
         </motion.div>

@@ -15,32 +15,35 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "PUMPRICE — Platform Redevelopment In Progress",
+  title: "PUMPRICE — Africa's Premium Drinks Experience, Rebuilt From Zero",
   description:
-    "PUMPRICE is rebuilding its premium online drinks platform to deliver a faster, smarter, and more immersive ordering experience.",
+    "PUMPRICE is rebuilding its premium online drinks platform to deliver faster ordering, smarter logistics, bulk event planning, and an elevated drinks-buying experience for modern Africa.",
   keywords: [
     "PUMPRICE",
     "premium drinks",
     "online drinks store",
-    "nightlife",
     "drinks delivery",
     "Nigeria",
-    "party ordering",
+    "Africa",
+    "event ordering",
+    "bulk drinks",
+    "celebrations",
+    "hosting",
   ],
   authors: [{ name: "PUMPRICE" }],
   openGraph: {
-    title: "PUMPRICE — Platform Redevelopment In Progress",
+    title: "PUMPRICE — Africa's Premium Drinks Experience, Rebuilt From Zero",
     description:
-      "PUMPRICE is rebuilding its premium online drinks platform to deliver a faster, smarter, and more immersive ordering experience.",
+      "PUMPRICE is rebuilding its premium online drinks platform to deliver faster ordering, smarter logistics, bulk event planning, and an elevated drinks-buying experience for modern Africa.",
     type: "website",
     locale: "en_NG",
     siteName: "PUMPRICE",
   },
   twitter: {
     card: "summary_large_image",
-    title: "PUMPRICE — Platform Redevelopment In Progress",
+    title: "PUMPRICE — Africa's Premium Drinks Experience, Rebuilt From Zero",
     description:
-      "PUMPRICE is rebuilding its premium online drinks platform to deliver a faster, smarter, and more immersive ordering experience.",
+      "PUMPRICE is rebuilding its premium online drinks platform to deliver faster ordering, smarter logistics, bulk event planning, and an elevated drinks-buying experience for modern Africa.",
   },
   robots: {
     index: true,

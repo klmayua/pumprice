@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 
 const messages = [
-  "Premium nightlife experiences",
-  "Fast drink deliveries",
-  "Party-ready convenience",
-  "Designed for modern African cities",
-  "Whiskey. Champagne. Cocktails.",
-  "Order by midnight, deliver by morning",
+  "Premium drinks experiences",
+  "Smarter ordering for modern Africa",
+  "Event-ready convenience",
+  "Bulk celebration planning",
+  "Faster premium deliveries",
+  "Drinks culture, elevated",
+  "Designed for how Africa celebrates",
+  "Seamless hosting experiences",
 ];
 
 const colors = ["#FFF200", "#F28C38", "#FFD86B", "#FFFFFF"];

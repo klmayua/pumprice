@@ -12,7 +12,7 @@ interface TimeLeft {
 
 function calculateTimeLeft(): TimeLeft {
   const difference =
-    new Date("2026-06-15T00:00:00").getTime() - new Date().getTime();
+    new Date("2026-05-26T00:00:00").getTime() - new Date().getTime();
 
   if (difference <= 0) {
     return { days: 0, hours: 0, minutes: 0, seconds: 0 };

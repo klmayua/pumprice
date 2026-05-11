@@ -15,7 +15,7 @@ import {
 const features = [
   { icon: Zap, label: "Smarter Ordering System" },
   { icon: Truck, label: "Improved Delivery Engine" },
-  { icon: Calendar, label: "Event & Party Ordering" },
+  { icon: Calendar, label: "Event & Celebration Planning" },
   { icon: Gift, label: "Festive Bulk Preorders" },
   { icon: Smartphone, label: "Improved Mobile Experience" },
   { icon: CreditCard, label: "Premium Checkout Flow" },
@@ -41,7 +41,7 @@ export default function RedevelopmentMessage() {
             We&apos;re tearing it all down and rebuilding from zero. Not because we
             have to — because{" "}
             <span className="text-white font-semibold">
-              nightlife in Africa deserves better
+              drinks culture in Africa deserves better
             </span>
             . Faster orders. Smarter logistics. Bulk event planning. Scheduled
             deliveries. The whole ecosystem, reimagined for the culture.
